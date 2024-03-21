@@ -65,6 +65,8 @@ private:
     VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
     VkDevice device;
 
+    VkQueue graphicsQueue;
+
     void initWindow() {
         glfwInit();
 
@@ -90,6 +92,8 @@ private:
         if (enableValidationLayers) {
             DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr);
         }
+
+        vkDestroyDevice(device, nullptr);
 
         vkDestroyInstance(instance, nullptr);
 
