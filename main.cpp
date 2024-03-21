@@ -49,6 +49,15 @@ struct QueueFamilyIndices {
     }
 };
 
+struct QueueFamilyIndices {
+    std::optional<uint32_t> graphicsFamily;
+    std::optional<uint32_t> presentFamily;
+
+    bool isComplete() {
+        return graphicsFamily.has_value() && presentFamily.has_value();
+    }
+};
+
 class HelloTriangleApplication {
 public:
     void run() {
@@ -106,7 +115,7 @@ private:
         }
 
         vkDestroyDevice(device, nullptr);
-
+        vkDestroySurfaceKHR(instance, surface, nullptr);
         vkDestroyInstance(instance, nullptr);
 
         glfwDestroyWindow(window);
