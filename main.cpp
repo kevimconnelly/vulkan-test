@@ -44,14 +44,6 @@ void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT
 
 struct QueueFamilyIndices {
     std::optional<uint32_t> graphicsFamily;
-
-    bool isComplete() {
-        return graphicsFamily.has_value();
-    }
-};
-
-struct QueueFamilyIndices {
-    std::optional<uint32_t> graphicsFamily;
     std::optional<uint32_t> presentFamily;
 
     bool isComplete() {
@@ -146,7 +138,6 @@ private:
         queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
         queueCreateInfo.queueCount = 1;
 
-        float queuePriority = 1.0f;
         queueCreateInfo.pQueuePriorities = &queuePriority;
 
         VkPhysicalDeviceFeatures deviceFeatures{};
