@@ -154,8 +154,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="frag.spv" />
-    <None Include="vert.spv" />
+    <None Include="..\..\..\shaders\frag.spv" />
+    <None Include="..\..\..\shaders\vert.spv" />
+    <None Include="shader.frag" />
+    <None Include="shader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -23,10 +23,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="vert.spv">
+    <None Include="shader.vert">
       <Filter>Source Files\Shaders</Filter>
     </None>
-    <None Include="frag.spv">
+    <None Include="shader.frag">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\shaders\frag.spv">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\shaders\vert.spv">
       <Filter>Source Files\Shaders</Filter>
     </None>
   </ItemGroup>
