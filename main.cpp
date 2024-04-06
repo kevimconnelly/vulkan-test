@@ -122,6 +122,7 @@ private:
 
     void cleanup() {
         vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+        vkDestroyRenderPass(device, renderPass, nullptr);
 
         for (auto imageView : swapChainImageViews) {
             vkDestroyImageView(device, imageView, nullptr);
